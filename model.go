@@ -116,7 +116,7 @@ func (g Game) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		switch msg.String() {
 		case "ctrl+c":
 			return g, tea.Quit
-		case "p":
+		case "esc":
 			g.Paused = !g.Paused
 			if !g.Paused {
 				return g, tea.Batch(tickCmd(g.Score), spawnCmd(g.Score))
@@ -311,7 +311,7 @@ func (g Game) View() string {
 
 	var inputLine string
 	if g.Paused {
-		inputLine = pauseStyle.Render("  PAUSED  p=resume  ctrl+c=quit")
+		inputLine = pauseStyle.Render("  PAUSED  esc=resume  ctrl+c=quit")
 	} else {
 		display := g.Input
 		if display == "" {

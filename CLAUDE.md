@@ -70,7 +70,7 @@ One shared input buffer. First word whose text exactly equals buffer is removed 
 - Progress bar per word for remaining time
 - HUD: `Score | Lives | WPM | Accuracy | Streak`
 - Game Over screen with final stats + restart (`r`) / quit (`q`)
-- Pause with `p`
+- Pause with `esc`
 
 ## Build Milestones (order)
 
